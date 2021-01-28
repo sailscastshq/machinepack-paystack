@@ -71,11 +71,15 @@ module.exports = {
       currency: currency,
       invoice_limit: invoice_limit
     })
-    makeRequest('/plan', {
-      method: 'POST',
-      headers: getHeaders(apiKey),
-      body: payload
-    }).then((createdPlan) => exits.success(createdPlan))
-   .catch((error) => exits.error(error))
+
+      makeRequest('/plan', {
+        method: 'POST',
+        headers: getHeaders(apiKey),
+        body: payload
+      }).then((createdPlan) => {
+        return exits.success(createdPlan)
+      }).catch(error => {
+        return exits.error(error)
+      })
   }
 };
