@@ -11,9 +11,9 @@ describe('Paystack.createPlan()', () => {
       name: 'Test Plan',
       amount: 10000,
       interval: 'monthly'
-    }).exec(function(error, createdPlan) {
+    }).exec(function(error, _) {
       if (error) return done(error)
-      return done(createdPlan)
+      return done()
     })
   })
 })
