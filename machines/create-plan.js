@@ -50,11 +50,9 @@ module.exports = {
   exits: {
     success:{
       description: 'Plan created successfully',
-      outputExample: 'Success'
     },
     error: {
       description: 'An unexpected error occurred.',
-      outputExample: 'An error happened'
     },
 
 
