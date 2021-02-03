@@ -8,4 +8,4 @@ module.exports = {
   },
   example: 'pk_test_f01df68ffa23d136959f2c532c583f7be2763932',
   protect: true
-};
+}
