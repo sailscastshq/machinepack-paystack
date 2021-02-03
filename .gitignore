@@ -28,3 +28,5 @@ coverage
 # Other
 ############################
 .node_history
+
+.eslintcache
