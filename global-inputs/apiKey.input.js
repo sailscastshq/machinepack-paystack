@@ -1,7 +1,6 @@
 module.exports = {
   friendlyName: 'API Key',
   description: 'A valid Paystack API key (aka Secret Key).',
-  required: true,
   whereToGet: {
     url: 'https://dashboard.paystack.com/#/settings/developer',
     description: 'Copy either "Test Secret Key" or "Live Secret Key" from your Paystack dashboard.',
