@@ -7,7 +7,6 @@ module.exports = {
   description: 'Create a plan on your integration',
   extendedDescription: 'This example machine is part of machinepack-boilerplate, used to introduce everyone to machines.',
   moreInfoUrl: 'https://paystack.com/docs/api/#plan-create',
-  sync: false,
   inputs: {
     apiKey: require('../constants/apiKey.input'),
     name: {
