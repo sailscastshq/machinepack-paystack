@@ -9,7 +9,7 @@ module.exports = {
   moreInfoUrl: 'https://paystack.com/docs/api/#plan-create',
   sync: false,
   inputs: {
-    apiKey: require('../global-inputs/apiKey.input'),
+    apiKey: require('../constants/apiKey.input'),
     name: {
       example: 'John',
       description: 'The name of plan',
