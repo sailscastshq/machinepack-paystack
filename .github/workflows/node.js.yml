@@ -22,11 +22,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      env:
-        PAYSTACK_API_KEY_FOR_TESTS:  ${{ secrets.PAYSTACK_API_KEY_FOR_TESTS }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: |
+        touch .env  
+        echo PAYSTACK_API_KEY_FOR_TESTS =${{ secrets.PAYSTACK_API_KEY_FOR_TESTS }} >> .env
     - run: npm ci
     - run: npm run build --if-present
-    - run: PAYSTACK_API_KEY_FOR_TESTS=$PAYSTACK_API_KEY_FOR_TESTS npm test
+    - run: npm test
