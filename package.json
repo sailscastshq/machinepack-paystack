@@ -47,7 +47,8 @@
       "list-providers",
       "list-countries",
       "list-states",
-      "resolve-card-bin"
+      "resolve-card-bin",
+      "resolve-account-number"
     ]
   },
   "husky": {
