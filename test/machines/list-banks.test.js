@@ -5,13 +5,12 @@ describe('Paystack.listBanks()', () => {
       country: 'nigeria',
       use_cursor: true,
       perPage: 1
-    }).exec(function (error, banks) {
-      console.log(banks)
+    }).exec(function (error, _) {
       if (error) return done(error)
       return done()
     })
   })
-  it.only('failed to retrieved banks with wrong apiKey', (done) => {
+  it('failed to retrieved banks with wrong apiKey', (done) => {
     global.Paystack.listPlans({
       apiKey: 'absolutely_FAKEY!!',
       country: 'nigeria',
