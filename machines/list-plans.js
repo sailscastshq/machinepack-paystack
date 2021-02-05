@@ -40,14 +40,7 @@ module.exports = {
     }
   },
 
-  fn: function ({ apiKey, perPage, page, interval, amount }, exits) {
-    const params = {
-      perPage,
-      page,
-      interval,
-      amount
-    }
-
+  fn: function ({ apiKey, ...params }, exits) {
     const definedParams = _.isEmpty(params) ? {} : _.pick(params, _.identity)
     const queryParams = _.isEmpty(definedParams) ? null : getQueryStringFromObject(definedParams)
     const endpoint = _.isNull(queryParams) ? '/plan' : `/plan?${queryParams}`
