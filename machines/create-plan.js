@@ -1,5 +1,6 @@
 const { getHeaders } = require('../helpers/get-headers')
 const { makeRequest } = require('../helpers/make-request')
+const _ = require('@sailshq/lodash')
 
 module.exports = {
 
@@ -76,22 +77,12 @@ module.exports = {
 
   },
 
-  fn: function ({ apiKey, name, amount, interval, description, send_invoices, send_sms, currency, invoice_limit }, exits) {
-    const payload = JSON.stringify({
-      name: name,
-      amount: amount,
-      interval: interval,
-      description: description,
-      send_invoices: send_invoices,
-      send_sms: send_sms,
-      currency: currency,
-      invoice_limit: invoice_limit
-    })
-
+  fn: function ({ apiKey, ...bodyParams }, exits) {
+    const definedBodyParams = _.isEmpty(bodyParams) ? {} : _.pick(bodyParams, _.identity)
     makeRequest('/plan', {
       method: 'POST',
       headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY),
-      body: payload
+      body: JSON.stringify(definedBodyParams)
     }).then((createdPlan) => {
       return exits.success(createdPlan)
     }).catch(error => {
