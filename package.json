@@ -45,7 +45,8 @@
       "list-plans",
       "list-banks",
       "list-providers",
-      "list-countries"
+      "list-countries",
+      "list-states"
     ]
   },
   "husky": {
