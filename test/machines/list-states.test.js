@@ -12,9 +12,8 @@ describe('Paystack.listStates()', () => {
   it('retrieves states without apiKey', (done) => {
     global.Paystack.listStates({
       country: 'CA'
-    }).exec(function (error, states) {
+    }).exec(function (error, _) {
       if (error) return done(error)
-      console.log(states)
       return done()
     })
   })
