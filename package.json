@@ -42,7 +42,8 @@
     "machineDir": "machines",
     "machines": [
       "create-plan",
-      "list-plans"
+      "list-plans",
+      "list-banks"
     ]
   },
   "husky": {
