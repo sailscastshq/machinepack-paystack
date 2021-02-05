@@ -43,7 +43,8 @@
     "machines": [
       "create-plan",
       "list-plans",
-      "list-banks"
+      "list-banks",
+      "list-providers"
     ]
   },
   "husky": {
