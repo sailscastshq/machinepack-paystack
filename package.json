@@ -50,7 +50,8 @@
       "resolve-card-bin",
       "resolve-account-number",
       "resolve-bvn-premium",
-      "resolve-bvn-standard"
+      "resolve-bvn-standard",
+      "verify-bvn-match"
     ]
   },
   "husky": {
