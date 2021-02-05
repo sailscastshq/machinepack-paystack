@@ -9,7 +9,7 @@ describe('Paystack.resolveCardBin()', () => {
     })
   })
 
-  it.only('fails to resolve bin with wrong apiKey', (done) => {
+  it('fails to resolve bin with wrong apiKey', (done) => {
     global.Paystack.listPlans({
       apiKey: 'absolutely_FAKEY!!',
       bin: '539983'
