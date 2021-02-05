@@ -48,7 +48,8 @@
       "list-countries",
       "list-states",
       "resolve-card-bin",
-      "resolve-account-number"
+      "resolve-account-number",
+      "resolve-bvn-premium"
     ]
   },
   "husky": {
