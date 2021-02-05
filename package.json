@@ -49,7 +49,8 @@
       "list-states",
       "resolve-card-bin",
       "resolve-account-number",
-      "resolve-bvn-premium"
+      "resolve-bvn-premium",
+      "resolve-bvn-standard"
     ]
   },
   "husky": {
