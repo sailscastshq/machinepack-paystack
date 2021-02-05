@@ -28,8 +28,8 @@ module.exports = {
     makeRequest(endpoint,
       {
         headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY)
-      }).then((retrievedPlan) => {
-      return exits.success(retrievedPlan)
+      }).then((retrievedBanks) => {
+      return exits.success(retrievedBanks)
     }).catch(error => {
       return exits.error(error)
     })
