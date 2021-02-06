@@ -56,7 +56,8 @@
       "create-refund",
       "list-refunds",
       "fetch-refund",
-      "fetch-plan"
+      "fetch-plan",
+      "update-plan"
     ]
   },
   "husky": {
