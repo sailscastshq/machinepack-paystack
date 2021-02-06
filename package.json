@@ -59,7 +59,8 @@
       "fetch-plan",
       "update-plan",
       "create-subscription",
-      "list-subscriptions"
+      "list-subscriptions",
+      "fetch-subscription"
     ]
   },
   "husky": {
