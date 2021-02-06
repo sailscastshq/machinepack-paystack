@@ -15,14 +15,8 @@ module.exports = {
 
   inputs: {
     apiKey: require('../constants/apiKey.input'),
-    perPage: {
-      example: 50,
-      description: 'Specify how many records you want to retrieve per page. If not specify we use a default value of 50.'
-    },
-    page: {
-      example: 1,
-      description: 'Specify exactly what page you want to retrieve. If not specify we use a default value of 1.'
-    },
+    perPage: require('../constants/perPage.input'),
+    page: require('../constants/page.input'),
     interval: {
       example: 'monthly',
       description: 'Filter list by plans with specified interval.'
