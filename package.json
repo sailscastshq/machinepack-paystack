@@ -52,7 +52,8 @@
       "resolve-bvn-premium",
       "resolve-bvn-standard",
       "verify-bvn-match",
-      "initialize-transaction"
+      "initialize-transaction",
+      "create-refund"
     ]
   },
   "husky": {
