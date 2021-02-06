@@ -54,7 +54,8 @@
       "verify-bvn-match",
       "initialize-transaction",
       "create-refund",
-      "list-refunds"
+      "list-refunds",
+      "fetch-refund"
     ]
   },
   "husky": {
