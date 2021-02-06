@@ -4,7 +4,6 @@
 node_modules
 npm-debug.log
 
-
 ############################
 # tmp, editor & OS files
 ############################
@@ -18,15 +17,16 @@ npm-debug.log
 *~
 .idea
 nbproject
-
+.env
 
 ############################
 # Tests
 ############################
 coverage
 
-
 ############################
 # Other
 ############################
 .node_history
+
+.eslintcache

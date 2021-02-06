@@ -1,5 +1,6 @@
-const {getHeaders} = require("../helpers/get-headers");
-const {makeRequest} = require("../helpers/make-request");
+const { getHeaders } = require('../helpers/get-headers')
+const { makeRequest } = require('../helpers/make-request')
+const _ = require('@sailshq/lodash')
 
 module.exports = {
 
@@ -7,9 +8,8 @@ module.exports = {
   description: 'Create a plan on your integration',
   extendedDescription: 'This example machine is part of machinepack-boilerplate, used to introduce everyone to machines.',
   moreInfoUrl: 'https://paystack.com/docs/api/#plan-create',
-  sync: false,
   inputs: {
-    apiKey: require('../global-inputs/apiKey.input'),
+    apiKey: require('../constants/apiKey.input'),
     name: {
       example: 'John',
       description: 'The name of plan',
@@ -27,7 +27,7 @@ module.exports = {
     },
     description: {
       example: 'This plan is a monthly plan',
-      description: 'A description for this plan',
+      description: 'A description for this plan'
     },
     send_invoices: {
       example: true,
@@ -39,7 +39,7 @@ module.exports = {
     },
     currency: {
       example: 'USD',
-      description: 'Currency in which amount is set',
+      description: 'Currency in which amount is set'
     },
     invoice_limit: {
       example: 6,
@@ -48,36 +48,44 @@ module.exports = {
   },
 
   exits: {
-    success:{
+    success: {
       description: 'Plan created successfully',
+      outputFriendlyName: 'Created Paystack Plan',
+      outputExample: {
+        status: true,
+        message: 'Plan created',
+        data: {
+          name: 'Monthly retainer',
+          amount: 500000,
+          interval: 'monthly',
+          integration: 100032,
+          domain: 'test',
+          plan_code: 'PLN_gx2wn530m0i3w3m',
+          send_invoices: true,
+          send_sms: true,
+          hosted_page: false,
+          currency: 'NGN',
+          id: 28,
+          createdAt: '2016-03-29T22:42:50.811Z',
+          updatedAt: '2016-03-29T22:42:50.811Z'
+        }
+      }
     },
     error: {
-      description: 'An unexpected error occurred.',
-    },
-
+      description: 'An unexpected error occurred.'
+    }
 
   },
 
-  fn: function ({ apiKey, name, amount, interval, description, send_invoices, send_sms, currency, invoice_limit }, exits) {
-    const payload = JSON.stringify({
-      name: name,
-      amount: amount,
-      interval: interval,
-      description: description,
-      send_invoices: send_invoices,
-      send_sms: send_sms,
-      currency: currency,
-      invoice_limit: invoice_limit
+  fn: function ({ apiKey, ...bodyParams }, exits) {
+    makeRequest('/plan', {
+      method: 'POST',
+      headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY),
+      body: JSON.stringify(bodyParams)
+    }).then((createdPlan) => {
+      return exits.success(createdPlan)
+    }).catch(error => {
+      return exits.error(error)
     })
-
-      makeRequest('/plan', {
-        method: 'POST',
-        headers: getHeaders(apiKey),
-        body: payload
-      }).then((createdPlan) => {
-        return exits.success(createdPlan)
-      }).catch(error => {
-        return exits.error(error)
-      })
   }
-};
+}

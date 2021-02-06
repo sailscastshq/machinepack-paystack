@@ -1,3 +1,5 @@
 module.exports = {
-  recursive: true
+  recursive: true,
+  require: 'test/hooks.js',
+  timeout: 50000
 }
