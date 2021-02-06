@@ -1,6 +1,6 @@
 {
   "name": "machinepack-paystack",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Communicate with the Paystack API to initialize transaction, create plans, etc.",
   "scripts": {
     "lint": "eslint .",
