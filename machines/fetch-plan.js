@@ -30,8 +30,8 @@ module.exports = {
     makeRequest(`/plan/${id_or_code}`,
       {
         headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY)
-      }).then((retrievedRefund) => {
-      return exits.success(retrievedRefund)
+      }).then((retrievedPlan) => {
+      return exits.success(retrievedPlan)
     }).catch(error => {
       return exits.error(error)
     })
