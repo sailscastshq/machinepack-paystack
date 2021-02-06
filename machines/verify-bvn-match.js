@@ -44,12 +44,11 @@ module.exports = {
   },
 
   fn: function ({ apiKey, ...bodyParams }, exits) {
-    const definedBodyParams = _.pick(bodyParams, _.identity)
     makeRequest('/bvn/match',
       {
         method: 'POST',
         headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY),
-        body: JSON.stringify(definedBodyParams)
+        body: JSON.stringify(bodyParams)
       }).then((lookedUpBvn) => {
       return exits.success(lookedUpBvn)
     }).catch(error => {

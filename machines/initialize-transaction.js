@@ -1,6 +1,5 @@
 const { getHeaders } = require('../helpers/get-headers')
 const { makeRequest } = require('../helpers/make-request')
-const _ = require('@sailshq/lodash')
 module.exports = {
 
   friendlyName: 'Initialize Transaction',
@@ -79,11 +78,10 @@ module.exports = {
   },
 
   fn: function ({ apiKey, ...bodyParams }, exits) {
-    const definedBodyParams = _.pick(bodyParams, _.identity)
     makeRequest('/transaction/initialize', {
       method: 'POST',
       headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY),
-      body: JSON.stringify(definedBodyParams)
+      body: JSON.stringify(bodyParams)
     }).then((createdTransaction) => {
       return exits.success(createdTransaction)
     }).catch(error => {

@@ -22,8 +22,7 @@ module.exports = {
   },
 
   fn: function ({ apiKey, ...params }, exits) {
-    const definedParams = _.isEmpty(params) ? {} : _.pick(params, _.identity)
-    const queryParams = _.isEmpty(definedParams) ? null : getQueryStringFromObject(definedParams)
+    const queryParams = _.isEmpty(params) ? null : getQueryStringFromObject(params)
     const endpoint = _.isNull(queryParams) ? '/bank' : `/bank?${queryParams}`
     makeRequest(endpoint,
       {

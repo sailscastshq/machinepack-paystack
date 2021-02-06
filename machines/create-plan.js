@@ -78,11 +78,10 @@ module.exports = {
   },
 
   fn: function ({ apiKey, ...bodyParams }, exits) {
-    const definedBodyParams = _.isEmpty(bodyParams) ? {} : _.pick(bodyParams, _.identity)
     makeRequest('/plan', {
       method: 'POST',
       headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY),
-      body: JSON.stringify(definedBodyParams)
+      body: JSON.stringify(bodyParams)
     }).then((createdPlan) => {
       return exits.success(createdPlan)
     }).catch(error => {

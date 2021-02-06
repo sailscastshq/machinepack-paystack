@@ -1,6 +1,5 @@
 const { getHeaders } = require('../helpers/get-headers')
 const { getQueryStringFromObject } = require('../helpers/get-query-string-from-object')
-const _ = require('@sailshq/lodash')
 const { makeRequest } = require('../helpers/make-request')
 module.exports = {
 
@@ -56,11 +55,8 @@ module.exports = {
   },
 
   fn: function ({ apiKey, ...params }, exits) {
-    const definedParams = _.isEmpty(params) ? {} : _.pick(params, _.identity)
-    const queryParams = _.isEmpty(definedParams) ? null : getQueryStringFromObject(definedParams)
-    const endpoint = _.isNull(queryParams) ? '/bank' : `/bank?${queryParams}`
-
-    makeRequest(endpoint,
+    const queryParams = getQueryStringFromObject(params)
+    makeRequest(`/bank?${queryParams}`,
       {
         headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY)
       }).then((retrievedBanks) => {
