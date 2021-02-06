@@ -5,9 +5,8 @@ describe('Paystack.updatePlan()', () => {
       id_or_code: 'PLN_u0pyhde6eqtuedk',
       name: 'Newest Plan',
       amount: 40000
-    }).exec(function (error, updated) {
+    }).exec(function (error, _) {
       if (error) return done(error)
-      console.log(updated)
       return done()
     })
   })
