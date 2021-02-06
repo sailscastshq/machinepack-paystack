@@ -51,7 +51,8 @@
       "resolve-account-number",
       "resolve-bvn-premium",
       "resolve-bvn-standard",
-      "verify-bvn-match"
+      "verify-bvn-match",
+      "initialize-transaction"
     ]
   },
   "husky": {
