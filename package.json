@@ -58,7 +58,8 @@
       "fetch-refund",
       "fetch-plan",
       "update-plan",
-      "create-subscription"
+      "create-subscription",
+      "list-subscriptions"
     ]
   },
   "husky": {
