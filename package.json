@@ -61,7 +61,8 @@
       "create-subscription",
       "list-subscriptions",
       "fetch-subscription",
-      "enable-subscription"
+      "enable-subscription",
+      "disable-subscription"
     ]
   },
   "husky": {
