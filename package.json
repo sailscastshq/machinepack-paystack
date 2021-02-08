@@ -63,7 +63,8 @@
       "fetch-subscription",
       "enable-subscription",
       "disable-subscription",
-      "verify-transaction"
+      "verify-transaction",
+      "list-transactions"
     ]
   },
   "husky": {
