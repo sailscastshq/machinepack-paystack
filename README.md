@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <h1>
   <a href="http://node-machine.org" title="Node-Machine public registry"><img alt="node-machine logo" title="Node-Machine Project" src="http://node-machine.org/images/machine-anthropomorph-for-white-bg.png" width="50" /></a>
@@ -52,6 +52,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://dominuskelvin.dev"><img src="https://avatars.githubusercontent.com/u/24433274?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Omereshone Kelvin</b></sub></a><br /><a href="#infra-DominusKelvin" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/sailscastshq/machinepack-paystack/commits?author=DominusKelvin" title="Tests">⚠️</a> <a href="https://github.com/sailscastshq/machinepack-paystack/commits?author=DominusKelvin" title="Code">💻</a></td>
+    <td align="center"><a href="http://haastrupea.me"><img src="https://avatars.githubusercontent.com/u/41439020?v=4?s=100" width="100px;" alt=""/><br /><sub><b>haastrup elijah</b></sub></a><br /><a href="https://github.com/sailscastshq/machinepack-paystack/commits?author=haastrupea" title="Code">💻</a> <a href="https://github.com/sailscastshq/machinepack-paystack/commits?author=haastrupea" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
