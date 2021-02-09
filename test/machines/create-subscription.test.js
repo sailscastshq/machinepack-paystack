@@ -1,7 +1,7 @@
 describe('Paystack.createSubscription()', () => {
   it('Successfully create a subscription', (done) => {
     global.Paystack.createSubscription({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       customer: 'customer2@email.com',
       plan: 'PLN_u0pyhde6eqtuedk'
     }).exec(function (error, _) {

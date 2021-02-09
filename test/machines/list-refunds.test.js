@@ -1,7 +1,7 @@
 describe('Paystack.listRefunds()', () => {
   it('Successfully retrieved refunds', (done) => {
     global.Paystack.listRefunds({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       reference: 'x7g15k5iye',
       currency: 'NGN'
     }).exec(function (error, _) {

@@ -1,7 +1,7 @@
 describe('Paystack.listProviders()', () => {
   it('Successfully retrieved providers without query params', (done) => {
     global.Paystack.listProviders({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS
+      apiKey: global.apiKey
     }).exec(function (error, _) {
       if (error) return done(error)
       return done()

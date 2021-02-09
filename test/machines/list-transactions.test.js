@@ -1,7 +1,7 @@
 describe('Paystack.listTransactions()', () => {
   it('Successfully retrieved list of Transactions without query params', (done) => {
     global.Paystack.listTransactions({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS
+      apiKey: global.apiKey
     }).exec(function (error, response) {
       if (error) return done(error)
 

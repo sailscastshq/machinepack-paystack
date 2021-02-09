@@ -1,9 +1,8 @@
 describe('Paystack.verifyTransaction()', () => {
   it('Successfully Verify Transaction', (done) => {
-    const apiKey = process.env.PAYSTACK_API_KEY_FOR_TESTS
     // create a brand new transaction
     global.Paystack.initializeTransaction({
-      apiKey: apiKey,
+      apiKey: global.apiKey,
       email: 'customer@email.com',
       amount: '20000'
     }).exec(function (error, response) {
@@ -11,7 +10,7 @@ describe('Paystack.verifyTransaction()', () => {
       const refId = response.data.reference
 
       global.Paystack.verifyTransaction({
-        apiKey: apiKey,
+        apiKey: global.apiKey,
         reference: refId
       }).exec((error, response) => {
         if (error) return done(error)
@@ -27,7 +26,7 @@ describe('Paystack.verifyTransaction()', () => {
   it('Failed to verify transaction with wrong reference Id', (done) => {
     const wrongRef = 'wrong_ref_12'
     global.Paystack.verifyTransaction({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       reference: wrongRef
     }).exec(function (error, response) {
       if (error) return done(error)
