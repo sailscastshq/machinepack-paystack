@@ -15,6 +15,16 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "haastrupea",
+      "name": "haastrup elijah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41439020?v=4",
+      "profile": "http://haastrupea.me",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
