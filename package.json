@@ -67,7 +67,8 @@
       "list-transactions",
       "fetch-transaction",
       "charge-authorization",
-      "check-authorization"
+      "check-authorization",
+      "list-disputes"
     ]
   },
   "husky": {
