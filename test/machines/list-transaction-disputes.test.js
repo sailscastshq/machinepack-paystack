@@ -1,5 +1,5 @@
 describe('Paystack.listTransactionDisputes()', () => {
-  it.only('Can successfully retrieve transaction disputes', (done) => {
+  it('Can successfully retrieve transaction disputes', (done) => {
     global.Paystack.listTransactionDisputes({
       apiKey: global.apiKey,
       id: 1
