@@ -12,7 +12,7 @@ describe('Paystack.chargeAuthorization()', () => {
     })
   })
 
-  it('Failed to charge authorization with wrong reference Id', (done) => {
+  it('Failed to charge authorization with wrong authorization_code', (done) => {
     global.Paystack.chargeAuthorization({
       apiKey: global.apiKey,
       authorization_code: 'AUTH_72btv547',
