@@ -72,7 +72,8 @@
       "fetch-dispute",
       "list-transaction-disputes",
       "update-dispute",
-      "add-evidence"
+      "add-evidence",
+      "view-transaction-timeline"
     ]
   },
   "husky": {
