@@ -15,7 +15,7 @@ describe('Paystack.chargeAuthorization()', () => {
   it('Failed to charge authorization with wrong authorization_code', (done) => {
     global.Paystack.chargeAuthorization({
       apiKey: global.apiKey,
-      authorization_code: 'AUTH_72btv547',
+      authorization_code: 'wrong authorization_code',
       email: 'customers@email.com',
       amount: 50000
     }).exec(function (error, response) {
