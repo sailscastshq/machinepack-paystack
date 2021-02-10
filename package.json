@@ -70,7 +70,8 @@
       "check-authorization",
       "list-disputes",
       "fetch-dispute",
-      "list-transaction-disputes"
+      "list-transaction-disputes",
+      "update-dispute"
     ]
   },
   "husky": {
