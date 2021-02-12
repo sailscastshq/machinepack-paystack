@@ -12,6 +12,7 @@ module.exports = {
   sync: false,
 
   inputs: {
+    apiKey: require('../constants/apiKey.input'),
     email: {
       example: 'customer@email.com',
       description: 'Customer\'s email address'
