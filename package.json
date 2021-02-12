@@ -77,7 +77,8 @@
       "transaction-totals",
       "export-transactions",
       "partial-debit",
-      "create-split"
+      "create-split",
+      "list-splits"
     ]
   },
   "husky": {
