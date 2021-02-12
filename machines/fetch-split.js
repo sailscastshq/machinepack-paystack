@@ -33,8 +33,8 @@ module.exports = {
     makeRequest(`/split/${id}`,
       {
         headers: getHeaders(apiKey || process.env.PAYSTACK_API_KEY)
-      }).then((retrievedPlan) => {
-      return exits.success(retrievedPlan)
+      }).then((retrievedSplit) => {
+      return exits.success(retrievedSplit)
     }).catch(error => {
       return exits.error(error)
     })
