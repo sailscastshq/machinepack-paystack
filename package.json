@@ -80,7 +80,8 @@
       "create-split",
       "list-splits",
       "fetch-split",
-      "update-split"
+      "update-split",
+      "add-split-subaccount"
     ]
   },
   "husky": {
