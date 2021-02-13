@@ -75,7 +75,8 @@
       "add-evidence",
       "view-transaction-timeline",
       "transaction-totals",
-      "export-transactions"
+      "export-transactions",
+      "partial-debit"
     ]
   },
   "husky": {
