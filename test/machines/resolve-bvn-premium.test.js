@@ -1,7 +1,7 @@
 describe('Paystack.resolveBvnPremium()', () => {
   it('Successfully resolved bvn', (done) => {
     global.Paystack.resolveBvnPremium({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       bvn: '00000000000'
     }).exec(function (error, _) {
       if (error) return done(error)

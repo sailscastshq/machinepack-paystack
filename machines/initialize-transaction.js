@@ -1,5 +1,6 @@
 const { getHeaders } = require('../helpers/get-headers')
 const { makeRequest } = require('../helpers/make-request')
+
 module.exports = {
 
   friendlyName: 'Initialize Transaction',

@@ -1,7 +1,7 @@
 describe('Paystack.listBanks()', () => {
   it('Successfully retrieved banks with only required params', (done) => {
     global.Paystack.listBanks({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       country: 'nigeria',
       use_cursor: true,
       perPage: 1

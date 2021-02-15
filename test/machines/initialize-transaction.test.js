@@ -1,7 +1,7 @@
 describe('Paystack.initializeTransaction()', () => {
   it('Successfully initialize Transaction', (done) => {
     global.Paystack.initializeTransaction({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       email: 'customer@email.com',
       amount: '20000'
     }).exec(function (error, _) {
@@ -14,7 +14,7 @@ describe('Paystack.initializeTransaction()', () => {
     const _ = require('@sailshq/lodash')
     const customRef = `custom_ref_${_.random(100000)}` // generate random id to avoid dublicate ref id
     global.Paystack.initializeTransaction({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       email: 'customer2@email.com',
       amount: '200000',
       reference: customRef

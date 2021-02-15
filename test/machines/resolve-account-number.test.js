@@ -1,7 +1,7 @@
 describe('Paystack.resolveAccountNumber()', () => {
   it('Successfully resolved account number', (done) => {
     global.Paystack.resolveAccountNumber({
-      apiKey: process.env.PAYSTACK_API_KEY_FOR_TESTS,
+      apiKey: global.apiKey,
       account_number: '3094540263',
       bank_code: '011'
     }).exec(function (error, _) {
