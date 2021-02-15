@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:sailcastshq/machinepack-paystack.git"
+    "url": "git@github.com:sailscastshq/machinepack-paystack.git"
   },
   "author": "Kelvin Omereshone<kelvin@sailscasts.com>",
   "license": "MIT",
