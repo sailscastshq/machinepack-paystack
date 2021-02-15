@@ -26,7 +26,18 @@ const Paystack = require('machinepack-paystack')
      console.log(initializedTransaction)
     })
 ```
+`machinepack-paystack` expects your Paystack secret for convenience to be in your environment as `PAYSTACK_API_KEY` so the above can be written as:
 
+```js
+// Initialize a transaction on your Paystack integration
+const Paystack = require('machinepack-paystack')
+ Paystack.initializeTransaction({
+      email: 'customer@email.com',
+      amount: '20000'
+    }).exec(function (error, intializedTransaction) {
+     console.log(initializedTransaction)
+    })
+```
 ## Test
 
 To run the test in this machine, rename `env.example` to `.env` then replace the content with your Paystack test API Key
