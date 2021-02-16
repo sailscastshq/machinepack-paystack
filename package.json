@@ -79,7 +79,8 @@
       "partial-debit",
       "create-split",
       "list-splits",
-      "fetch-split"
+      "fetch-split",
+      "update-split"
     ]
   },
   "husky": {
