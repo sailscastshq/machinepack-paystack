@@ -88,7 +88,8 @@
       "fetch-customer",
       "update-customer",
       "validate-customer",
-      "whitelist-or-blacklist-customer"
+      "whitelist-or-blacklist-customer",
+      "deactivate-authorization"
     ]
   },
   "husky": {
