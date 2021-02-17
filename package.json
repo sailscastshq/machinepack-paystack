@@ -86,7 +86,8 @@
       "create-customer",
       "list-customers",
       "fetch-customer",
-      "update-customer"
+      "update-customer",
+      "validate-customer"
     ]
   },
   "husky": {
