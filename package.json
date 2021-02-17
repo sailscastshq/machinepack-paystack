@@ -82,7 +82,8 @@
       "fetch-split",
       "update-split",
       "add-split-subaccount",
-      "remove-subaccount-from-split"
+      "remove-subaccount-from-split",
+      "create-customer"
     ]
   },
   "husky": {
