@@ -89,7 +89,8 @@
       "update-customer",
       "validate-customer",
       "whitelist-or-blacklist-customer",
-      "deactivate-authorization"
+      "deactivate-authorization",
+      "create-dedicated-accounts"
     ]
   },
   "husky": {
